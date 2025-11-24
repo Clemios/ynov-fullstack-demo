@@ -1,10 +1,10 @@
 const ROUTES = [
     {
-        url: '/public',
+        url: '/users',
         auth: false,
         creditCheck: false,
         proxy: {
-            target: "http://localhost:3000",
+            target: "http://user-service:5000",
             changeOrigin: true,
         }
     },
@@ -13,7 +13,7 @@ const ROUTES = [
         auth: true,
         creditCheck: false,
         proxy: {
-            target: "http://localhost:5555",
+            target: "http://cv-service:5555",
             changeOrigin: true,
         }
     }
