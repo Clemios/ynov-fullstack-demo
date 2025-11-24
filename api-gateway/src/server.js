@@ -1,5 +1,5 @@
-import { setupLogging } from './logging.js';
-import { setupProxies } from './proxy.js';
+import { setupLogging } from './src/logging.js';
+import { setupProxies } from './src/proxy.js';
 import express from 'express';
 import cors from "cors";
 
