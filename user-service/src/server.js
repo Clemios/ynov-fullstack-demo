@@ -1,6 +1,7 @@
 import express from 'express';
 import { setupLogging } from './middlewares/logging.js';
 import authRouter from './routes/auth.js';
+import userRouter from './routes/user.js';
 import cors from "cors";
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,6 +30,8 @@ app.get('/test', (req, res) => {
 });
 
 app.use('/auth', authRouter);
+
+app.use('/users', userRouter);
 
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`Public API server is running on port ${PORT}`);
