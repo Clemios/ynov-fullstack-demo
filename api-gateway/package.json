@@ -2,7 +2,7 @@
   "name": "demo",
   "version": "1.0.0",
   "description": "ma demo",
-  "main": "server.js",
+  "main": "src/server.js",
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",

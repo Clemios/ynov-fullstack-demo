@@ -4,11 +4,11 @@ services:
   user-service:
     build:
       context: .
-    # ports:
-    #   - "5000:5000"
+    ports:
+      - "5000:5000"
     restart: unless-stopped
-    # depends_on:
-    #   - user-db
+    depends_on:
+      - users-db
     networks:
       - demo-network
 
@@ -36,11 +36,9 @@ services:
     networks:
       - demo-network
 
-
 volumes:
-      users-db-data:
+  users-db-data:
 networks:
   demo-network:
     driver: bridge
     external: true
-    
