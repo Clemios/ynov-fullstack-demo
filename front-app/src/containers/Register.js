@@ -1,4 +1,4 @@
-import { request } from "../helpers/request";
+import { axiosPublicRequests } from "../helpers/request";
 import { useState } from "react";
 
 
@@ -10,7 +10,7 @@ const Register = () => {
     const handleRegister = (e) => {
         e.preventDefault();
         try {
-            request.post('/users/auth/register', {
+            axiosPublicRequests.post('/users/auth/register', {
                 email: email,
                 password: password
             }).then((response) => {
