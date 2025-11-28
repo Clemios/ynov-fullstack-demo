@@ -5,22 +5,21 @@ import Button from './components/Button';
 function App() {
   return (
     <div className="App">
-      <Button onClick={() => console.log('clicked')} onFocus={() => console.log('focused')} onBlur={() => console.log('blurred')}>Click me</Button>
-      <header className="App-header">
+      <div className='flex flex-row justify-between items-center p-2'>
+        <div className='w-16'> <img src={logo} /></div>
+        <div className='flex flex-row gap-2 justify-end p-2'>
+        <a href="/register"><Button small>Register</Button></a>
+        <a href="/login"><Button primary small>Login</Button></a>
+        </div>
+      </div>
+      <div className="App-header">
+        <h1>Welcome to the App</h1>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <div className="text-red-500 bg-blue-500">test tailwind</div>
-      </header>
+        <div className="flex flex-row gap-2">
+          <a href="/register"><Button onFocus={() => console.log('focused')} onBlur={() => console.log('blurred')}>Register</Button></a>
+          <a href="/login"><Button primary onClick={() => console.log('clicked')} onFocus={() => console.log('focused')} onBlur={() => console.log('blurred')}>Login</Button></a>      
+        </div>
+      </div>
     </div>
   );
 }
